@@ -8,7 +8,7 @@
 ruby dublinbus.rb -o 0.0.0.0
 ```
 
-- Get json for all buses at choosen bus stop:
+- Get json for all buses at chosen bus stop:
 
 ```
 curl -i -X GET -H 'Content-Type: application/json' 127.0.0.1:4567/stop/784
