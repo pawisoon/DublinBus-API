@@ -9,7 +9,7 @@ get '/stop/:stopid/:busno' do
     OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
     response = open('https://data.dublinked.ie/cgi-bin/rtpi/realtimebusinformation?stopid='+stopid.to_s).read
     buses = Array.new
-    r = []
+    r = Array.new
     data = JSON.parse(response)
     
     for i in 0..data["results"].length-1
