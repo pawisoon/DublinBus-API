@@ -13,11 +13,43 @@ ruby dublinbus.rb -o 0.0.0.0
 ```
 curl -i -X GET -H 'Content-Type: application/json' 127.0.0.1:4567/stop/784
 ```
+Response:
+
+```
+HTTP/1.1 200 OK 
+Content-Type: text/html;charset=utf-8
+Content-Length: 817
+X-Xss-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Server: WEBrick/1.3.1 (Ruby/1.9.3/2012-04-20)
+Date: Wed, 15 Feb 2017 11:29:03 GMT
+Connection: Keep-Alive
+
+{"stopid":"784","errorcode":"0","data":[{"route":"39A","destination":"Ongar","due":"2"},{"route":"39","destination":"Ongar","due":"6"},{"route":"37","destination":"Blanchardstown SC","due":"6"},{"route":"38A","destination":"Damastown","due":"14"},{"route":"39A","destination":"Ongar","due":"15"},{"route":"39A","destination":"Ongar","due":"25"},{"route":"37","destination":"Blanchardstown SC","due":"26"},{"route":"38","destination":"Damastown","due":"34"},{"route":"70","destination":"Dunboyne","due":"34"},{"route":"39A","destination":"Ongar","due":"35"},{"route":"39","destination":"Ongar","due":"36"},{"route":"39A","destination":"Ongar","due":"46"},{"route":"37","destination":"Blanchardstown SC","due":"46"},{"route":"38A","destination":"Damastown","due":"54"},{"route":"39A","destination":"Ongar","due":"56"}]}%    
+```
 
 - Get json for one bus at choosen bus stop:
 
 ```
 curl -i -X GET -H 'Content-Type: application/json' 127.0.0.1:4567/stop/784/39A
+```
+
+Response:
+
+```
+HTTP/1.1 200 OK 
+Content-Type: text/html;charset=utf-8
+Content-Length: 334
+X-Xss-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Server: WEBrick/1.3.1 (Ruby/1.9.3/2012-04-20)
+Date: Wed, 15 Feb 2017 11:29:58 GMT
+Connection: Keep-Alive
+
+{"stopid":"784","errorcode":"0","data":[{"route":"39A","destination":"Ongar","due":"1"},{"route":"39A","destination":"Ongar","due":"14"},{"route":"39A","destination":"Ongar","due":"24"},{"route":"39A","destination":"Ongar","due":"34"},{"route":"39A","destination":"Ongar","due":"45"},{"route":"39A","destination":"Ongar","due":"55"}]}% 
+
 ```
 
 
